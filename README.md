@@ -34,6 +34,29 @@ versionable, testable, and collaborative.
 
 Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The Airflow scheduler executes your tasks on an array of workers while following the specified dependencies. Rich command line utilities make performing complex surgeries on DAGs a snap. The rich user interface makes it easy to visualize pipelines running in production, monitor progress, and troubleshoot issues when needed.
 
+## 安装
+
+### 检查python的环境（建议3.5及其以上）
+
+python --version
+
+virtualenv --version
+
+yum install mysql-devel
+
+### 安装airflow
+cd /home/tangyibo/airflow
+
+virtualenv -p `which python` venv
+
+source venv/bin/activate
+
+(venv)export AIRFLOW_HOME=/home/tangyibo/airflow
+
+(venv)export SLUGIFY_USES_TEXT_UNIDECODE=yes
+
+(venv)pip install apache-airflow[all]
+
 ## Getting started
 
 Please visit the Airflow Platform documentation (latest **stable** release) for help with [installing Airflow](https://airflow.apache.org/installation.html), getting a [quick start](https://airflow.apache.org/start.html), or a more complete [tutorial](https://airflow.apache.org/tutorial.html).
